@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %} - BVRJ.de</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta name="description" content="">
+
+        <meta property="og:title" content="">
+        <meta property="og:type" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:image:alt" content="">
+
+        <link rel="icon" href="/static/favicon.ico" sizes="any">
+        <link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/static/icon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="manifest" href="/static/site.webmanifest">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        },
+                        fontFamily: {
+                            firaSans: ['"Fira Sans"', "sans-serif"]
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "lsc3hzdxhw");
+        </script>
+
+        <style type="text/tailwindcss">
+            a {
+                @apply hover:border-b-2 hover:border-blue-900 hover:text-blue-900 transition-all;
+            }
+        </style>
+    {% endblock %}
+    
+</head>
+
+<body class="font-firaSans">
+
+
+
+<div id="header" class="absolute w-screen top-0 left-0 max-h-40 h-40 shadow-xl">
+
+    <div class="flex max-h-32 h-32 justify-between mb-1">
+        <a href="bvrj.de" class="max-h-32 "><img src="/static/img/bildwortmarke.png" class="h-32 border-b-[1px] border-gray-200"></a>
+        <div class="flex-1 flex justify-end p-8 items-center border-b-[1px] border-gray-200">
+            <p>Text</p>
+        </div>
+        
+    </div>
+
+    <nav class="w-full flex justify-between px-20 ">
+        <a href="/">Home</a>
+        <a href="/about">Über uns</a>
+        <a href="/angebot">Angebot</a>
+        <a href="/contact">Kontakt</a>
+    </nav>
+    
+</div>
+<div class="h-40"></div>
+
+
+<div id="main" class="p-8 h-full">
+    {% block content %}{% endblock %}
+</div>
+
+
+<div id="footer" class="absolute bg-yellow-400 w-screen bottom-0 left-0 p-8">
+    {% block footer %}
+        &copy; Copyright 2024 by <a href="https://sonefall.com">Nikolas Heise</a>
+    {% endblock %}
+</div>
+
+<script src="/static/js/app.js"></script>
+
+</body>
+
+</html>
