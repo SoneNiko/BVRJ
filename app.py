@@ -7,19 +7,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.jinja2')
+    return render_template('index.html')
 
 @app.route('/angebot')
 def angebot():
-    return render_template('angebot.jinja2')
+    return render_template('angebot.html')
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.jinja2')
+    return render_template('contact.html')
 
 @app.route('/about')
 def about():
-    return render_template('about.jinja2')
+    return render_template('about.html')
 
 
 

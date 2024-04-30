@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+  <head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{% endblock %} - BVRJ.de</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="" />
+
+    <meta
+      name="twitter:card"
+      content="Das Bundesministerium für die Verteilung und den Rückruf von Jod Tabletten (BVRJ)"
+    />
+    <meta
+      property="og:url"
+      content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/"
+    />
+    <meta property="og:title" content="A Twitter for My Sister" />
+    <meta
+      property="og:description"
+      content="Das Bundesministerium für die Verteilung und den Rückruf von Jod Tabletten (BVRJ)"
+    />
+    <meta
+      property="og:image"
+      content="https://bvrj.de/static/img/bildwortmarke.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bvrj.de/" />
+    <meta
+      property="og:image"
+      content="https://bvrj.de/static/img/bildwortmarke.png"
+    />
+    <meta property="og:image:alt" content="Bildwortmarke des BVRJs" />
+
+    <link rel="icon" href="/static/favicon.ico" sizes="any" />
+    <link rel="icon" href="/static/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/static/icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="manifest" href="/static/site.webmanifest" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              firaSans: ['"Fira Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "lsc3hzdxhw");
+    </script>
+
+    <style type="text/tailwindcss">
+      a {
+        @apply hover:underline underline-offset-8 hover:text-blue-900 transition-all;
+      }
+    </style>
+    {% endblock %}
+  </head>
+
+  <body class="font-firaSans">
+    <div
+      id="header"
+      class="absolute w-screen top-0 left-0 max-h-40 h-40 shadow-xl"
+    >
+      <div class="container mx-auto w-full">
+        <div class="flex max-h-32 h-32 justify-between mb-1">
+          <a href="bvrj.de" class="max-h-32">
+            <img
+              src="/static/img/bildwortmarke.png"
+              class="h-32 border-b-[1px] border-gray-200"
+            />
+          </a>
+          <div
+            class="flex-1 flex justify-end p-8 items-center border-b-[1px] border-gray-200"
+          >
+            <a href="/login" class="mx-4 py-2">Registrieren</a>
+            <div class="border-x-[1px] h-[4ch] border-gray-300"></div>
+            <a href="/signup" class="mx-4 py-2">Anmelden</a>
+          </div>
+        </div>
+
+        <nav class="w-full flex justify-between px-20">
+          <a href="/">Home</a>
+          <a href="/about">Über uns</a>
+          <a href="/angebot">Angebot</a>
+          <a href="/contact">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+    <div class="h-40"></div>
+
+    <div id="main" class="p-8 h-full container mx-auto">
+      {% block content %}{% endblock %}
+    </div>
+
+    <div id="footer" class="absolute bg-[#dcdcdc] w-screen bottom-0 left-0 p-8">
+      <div
+        class="w-full flex justify-between items-center container mx-auto gap-8"
+      >
+        <div>
+          <div class="flex gap-4 items-center mb-4 justify-between">
+            <a href="https://www.sonefall.com">
+              <img
+                src="https://www.sonefall.com/logo-pride.png"
+                height="80"
+                width="120"
+              />
+            </a>
+            <div class="h-[5ch] border-x-[1px] border-gray-400"></div>
+            <a href="https://devs-from.asia/">
+              <img src="/static/img/vgdevvev.png" height="76" width="76" />
+            </a>
+            <div class="h-[5ch] border-x-[1px] border-gray-400"></div>
+            <img src="/static/img/bildwortmarke.png" height="80" width="120" />
+          </div>
+          <div class="w-96 text-justify text-xs">
+            &copy; Copyright 2024 by
+            <a href="https://sonefall.com">Nikolas Heise</a> in Collaboration
+            mit der Vereinigung gegen die Eintragung von Vereinen e.V. und den
+            Betreibern des Korstiversums.
+          </div>
+        </div>
+
+        <div class="h-[10ch] border-x-[1px] border-gray-400"></div>
+
+        <div>
+          <p class="font-bold">Useful Links</p>
+          <ul class="mt-2">
+            <li><a href="https://sonefall.com/cv">Jobs</a></li>
+            <li>
+              <a href="https://styleguide.bundesregierung.de/sg-de">Branding</a>
+            </li>
+            <li>
+              <a href="https://bvrj.de/contact">Kontakt</a> /
+              <a href="https://forum.korsti.pp.ua/forum-3.html"
+                >Beschwerdestelle</a
+              >
+            </li>
+            <li>
+              <a href="https://etel-tuning.eu/produkt/getriebesand/"
+                >Anschaffung von Ersatzteilen für Dienstautos des BVRJ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="h-[10ch] border-x-[1px] border-gray-400"></div>
+
+        <div class="mr-12">
+          <a
+            href="https://dserver.bundestag.de/btd/20/087/2008763.pdf"
+            class="font-bold"
+            >Legaler Stoff</a
+          >
+          <ul class="mt-2">
+            <li>
+              <a href="https://wiki.korsti.pp.ua/wiki/Korstipedia:Datenschutz"
+                >Privatsphären Politik</a
+              >
+            </li>
+            <li>
+              <a href="https://look-at.it/bvrj-refund-policy"
+                >Rückgaben Politik</a
+              >
+            </li>
+            <li>
+              <a href="https://www.bodensee-therme.de/">Terme des Dienstes</a>
+            </li>
+            <li>
+              <a href="https://enjeck.com/equations/">Terme der Mathematik</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
